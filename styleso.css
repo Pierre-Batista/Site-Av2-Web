@@ -1,0 +1,295 @@
+/* Variáveis CSS */
+:root {
+    --cor-primaria: rgb(28, 76, 165); /* Azul */
+    --cor-secundaria: rgba(72, 90, 117, 0.2); /* Cinza suave */
+    --cor-fundo: #ffffff; /* Branco */
+    --cor-texto: rgb(34, 35, 41); /* Texto escuro */
+    --cor-secundaria-texto: #333; /* Cinza escuro */
+    --border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: var(--cor-texto); /* Texto principal */
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-fundo);
+    padding: 30px 10%;
+    color: var(--cor-texto);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    padding: 8px 10px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Seção de Destaque para Coopersul */
+.coopersul-destaque {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 5%;
+}
+
+/* Ajuste para a imagem capa titulo 1 */
+.coopersul-imagem img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    margin-left: 120%; /* Move a imagem 120% para a direita */
+    margin-top: -110%;  /* Move a imagem 110% para cima */
+}
+
+
+
+.coopersul-texto {
+    max-width: 700px;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.coopersul-texto h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.coopersul-texto p {
+    font-size: 1rem;
+    color: var(--cor-secundaria-texto);
+    line-height: 1.6;
+}
+
+/* Seção de Conteúdo */
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.texto h1 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 1rem;
+    color: var(--cor-secundaria-texto);
+}
+
+/* Carrossel de Imagens - Sala de Treinamento */
+.carrossel-container {
+    background-color: #f4f4f4;
+    padding: 30px 5%;
+    text-align: center;
+    position: relative; /* Garante que os botões de navegação fiquem sobre o carrossel */
+}
+
+.carrossel-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+.carrossel {
+    display: flex;
+    justify-content: center;
+    overflow: visible; /* Ajustado para permitir a ampliação das imagens */
+    position: relative;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.carrossel-item {
+    width: 30%;
+    margin: 0 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Efeito de interação: quando o mouse passa em cima */
+.carrossel-item img:hover {
+    transform: scale(1.1); /* Aumenta a imagem 10% ao passar o mouse */
+}
+
+/* Botões de navegação do carrossel */
+.carrossel-container .prev,
+.carrossel-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carrossel-container .prev {
+    left: 10px;
+}
+
+.carrossel-container .next {
+    right: 10px;
+}
+
+.carrossel-container .prev:hover,
+.carrossel-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade para o carrossel */
+@media (max-width: 768px) {
+    .carrossel-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .carrossel-item img {
+        height: 200px;
+    }
+}
+
+/* Seção de Parceiros - Rodapé */
+.conteudo3 {
+    background-color: #003366; /* Azul marinho */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.conteudo3 h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.parceiros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.parceiros img {
+    width: 100px;
+    height: auto;
+    max-width: 120px;
+    border-radius: var(--border-radius);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 5%;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .menu {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .coopersul-imagem {
+        width: 50px;
+    }
+
+    .coopersul-texto h1 {
+        font-size: 1.5rem;
+    }
+
+    .carrossel-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .carrossel {
+        gap: 10px;
+    }
+
+  /* Carrossel */
+.carrossel-item img {
+    width: 100%;  /* Garante que a imagem ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Efeito de interação: quando o mouse passa em cima */
+.carrossel-item img:hover {
+    transform: scale(1.1); /* Aumenta a imagem 10% ao passar o mouse */
+}
+
+
+}
